@@ -64,10 +64,10 @@
 
         default_layer {
             bindings = <
-&kp ESC     &kp Q     &kp W     &kp E            &kp R         &kp T                                      &kp Y        &kp U          &kp I      &kp O     &kp P      &kp EQUAL
-&kp TAB     &kp A     &kp S     &kp D            &kp F         &kp G                                      &kp H        &kp J          &kp K      &kp L     &kp MINUS  &kp COLON
-&kp LSHIFT  &kp Z     &kp X     &kp C            &kp V         &kp B        &kp LANG1          &mkp RCLK  &kp N        &kp M          &kp COMMA  &kp DOT   &kp UP     &kp AT
-&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANG_HIRAGANA  &mkp LCLK  &lt 2 ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
+&kp ESC     &kp Q     &kp W     &kp E            &kp R         &kp T                                   &kp Y        &kp U          &kp I      &kp O     &kp P      &kp EQUAL
+&kp TAB     &kp A     &kp S     &kp D            &kp F         &kp G                                   &kp H        &kp J          &kp K      &kp L     &kp MINUS  &kp COLON
+&kp LSHIFT  &kp Z     &kp X     &kp C            &kp V         &kp B        &kp LANGUAGE_2  &mkp RCLK  &kp N        &kp M          &kp COMMA  &kp DOT   &kp UP     &kp AT
+&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANGUAGE_1  &mkp LCLK  &lt 2 ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
