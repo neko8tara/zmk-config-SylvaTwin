@@ -64,10 +64,10 @@
 
         default_layer {
             bindings = <
-&kp ESC     &kp Q     &kp W     &kp E            &kp R         &kp T                                      &kp Y      &kp U          &kp I      &kp O     &kp P      &kp EQUAL
-&kp TAB     &kp A     &kp S     &kp D            &kp F         &kp G                                      &kp H      &kp J          &kp K      &kp L     &kp MINUS  &kp COLON
-&kp LSHIFT  &kp Z     &kp X     &kp C            &kp V         &kp B        &kp LANG1          &mkp RCLK  &kp N      &kp M          &kp COMMA  &kp DOT   &kp UP     &kp AT
-&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANG_HIRAGANA  &mkp LCLK  &kp ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
+&kp ESC     &kp Q     &kp W     &kp E            &kp R         &kp T                                      &kp Y        &kp U          &kp I      &kp O     &kp P      &kp EQUAL
+&kp TAB     &kp A     &kp S     &kp D            &kp F         &kp G                                      &kp H        &kp J          &kp K      &kp L     &kp MINUS  &kp COLON
+&kp LSHIFT  &kp Z     &kp X     &kp C            &kp V         &kp B        &kp LANG1          &mkp RCLK  &kp N        &kp M          &kp COMMA  &kp DOT   &kp UP     &kp AT
+&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANG_HIRAGANA  &mkp LCLK  &lt 2 ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
@@ -75,10 +75,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS      &kp EQUAL         &kp INTERNATIONAL_3
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp BSLH
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &studio_unlock  &kp NUMBER_0  &kp COMMA     &kp DOT       &none          &none             &kp INTERNATIONAL_1
+&trans  &kp PERCENT   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                &kp DOUBLE_QUOTES  &kp NUMBER_8   &kp NUMBER_9  &kp MINUS  &kp N          &none
+&trans  &kp DOT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                    &kp SINGLE_QUOTE   &kp NUMBER_5   &kp NUMBER_6  &kp CARET  &none          &none
+&none   &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &none  &none  &none              &kp AMPERSAND  &kp HASH      &none      &kp PG_UP      &none
+&none   &none         &none         &none         &none         &none         &none  &none  &trans             &kp COMMA      &kp DOT       &kp HOME   &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -86,10 +86,10 @@
 
         layer_2 {
             bindings = <
-&none         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                              &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&none         &kp F6        &kp F7        &kp F8        &kp F9        &kp F10                             &mkp MCLK  &trans     &trans  &trans  &trans  &trans
-&none         &kp F11       &kp F12       &none         &none         &none       &none           &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &studio_unlock  &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&none         &none         &none         &none         &none         &none                              &none  &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none         &none         &none         &none         &none         &none                              &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none         &none         &none         &none         &none         &none       &none           &none  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &studio_unlock  &none  &none  &none   &none    &none    &none    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
