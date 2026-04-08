@@ -79,7 +79,7 @@
 &kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANGUAGE_1  &mkp LCLK  &lt 2 ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_UP>;
         };
 
         layer_1 {
