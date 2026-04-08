@@ -59,6 +59,15 @@
         };
     };
 
+    behaviors {
+        encoder: encoder {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENCODER";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,7 +79,7 @@
 &kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp QUESTION  &lt 1 SPACE  &kp LANGUAGE_1  &mkp LCLK  &lt 2 ENTER  &kp BACKSPACE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&encoder SCRL_DOWN SCRL_UP>;
         };
 
         layer_1 {
