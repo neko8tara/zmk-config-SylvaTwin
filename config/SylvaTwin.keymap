@@ -57,7 +57,7 @@
 
         cut {
             bindings = <&kp LC(X)>;
-            key-positions = <40 26>;a
+            key-positions = <40 26>;
         };
     };
 
