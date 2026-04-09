@@ -68,7 +68,6 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <250>;
         };
-        };
     };
 
     keymap {
