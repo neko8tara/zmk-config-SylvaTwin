@@ -14,34 +14,9 @@
     combos {
         compatible = "zmk,combos";
 
-        prtsc {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
-        };
-
-        RightClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <30 44>;
-        };
-
-        MiddleClick {
-            bindings = <&mkp MCLK>;
-            key-positions = <29 43>;
-        };
-
         RightClick2 {
             bindings = <&mkp RCLK>;
             key-positions = <31 45>;
-        };
-
-        MiddleClick2 {
-            bindings = <&mkp MCLK>;
-            key-positions = <32 46>;
-        };
-
-        zen-han {
-            bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
         };
 
         paste {
@@ -58,6 +33,11 @@
             bindings = <&kp LC(X)>;
             key-positions = <40 26>;
         };
+
+        pastevalue {
+            bindings = <&kp LS(LC(V))>;
+            key-positions = <16 28 42>;
+        };
     };
 
     behaviors {
@@ -70,6 +50,22 @@
         };
     };
 
+    macros {
+        pw1: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(U) &kp J &kp C &kp DOT &kp N3 &kp N0 &kp N7 &kp N0 &kp EXCL>;
+            label = "PW";
+        };
+
+        pasteformula: pasteformula {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "PASTEFORMULA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,7 +74,7 @@
 &kp ESC     &kp Q     &kp W     &kp E            &kp R          &kp T                                   &kp Y            &kp U       &kp I      &kp O     &kp P      &kp EQUAL
 &kp TAB     &kp A     &kp S     &kp D            &kp F          &kp G                                   &kp H            &kp J       &kp K      &kp L     &kp MINUS  &kp ENTER
 &kp LSHIFT  &kp Z     &kp X     &kp C            &kp V          &kp B        &kp LANGUAGE_2  &mkp RCLK  &kp N            &kp M       &kp COMMA  &kp DOT   &kp UP     &kp AT
-&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp LS(SLASH)  &lt 1 SPACE  &kp LANGUAGE_1  &mkp LCLK  &lt 2 BACKSPACE  &kp DELETE  &kp DEL    &kp LEFT  &kp DOWN   &kp RIGHT
+&kp LCTRL   &kp LGUI  &kp LALT  &kp EXCLAMATION  &kp LS(SLASH)  &lt 1 SPACE  &kp LANGUAGE_1  &mkp LCLK  &lt 2 BACKSPACE  &kp DELETE  &none      &kp LEFT  &kp DOWN   &kp RIGHT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -89,7 +85,7 @@
 &trans  &kp PERCENT   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                 &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none          &none
 &trans  &kp DOT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                     &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET  &none          &none
 &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans  &none  &kp LS(SEMI)       &kp AMPERSAND         &kp HASH               &kp GRAVE  &kp PG_UP      &none
-&none   &none         &none         &none         &none         &none         &trans  &none  &none              &trans                &trans                 &kp HOME   &kp PAGE_DOWN  &kp END
+&none   &none         &none         &none         &none         &none         &trans  &none  &trans             &trans                &pw1                   &kp HOME   &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
