@@ -88,6 +88,11 @@
             bindings = <&kp LC(Y)>;
             key-positions = <6 18>;
         };
+
+        CtrlT {
+            bindings = <&kp LC(T)>;
+            key-positions = <5 17>;
+        };
     };
 
     behaviors {
