@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 // #define ZMK_MOUSE_DEFAULT_SCRL_VAL 150
 
 #include <behaviors.dtsi>
@@ -66,6 +65,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <120>;
         };
     };
@@ -86,10 +86,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp PERCENT   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                &kp DOUBLE_QUOTES  &kp NUMBER_8   &kp NUMBER_9  &kp MINUS  &kp N          &none
-&trans  &kp DOT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                    &kp SINGLE_QUOTE   &kp NUMBER_5   &kp NUMBER_6  &kp CARET  &none          &none
-&none   &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &none  &none  &none              &kp AMPERSAND  &kp HASH      &none      &kp PG_UP      &none
-&none   &none         &none         &none         &none         &none         &none  &none  &trans             &kp COMMA      &kp DOT       &kp HOME   &kp PAGE_DOWN  &kp END
+&trans  &kp PERCENT   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                 &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none          &none
+&trans  &kp DOT       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                     &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET  &none          &none
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &trans  &none  &none              &kp AMPERSAND         &kp HASH               &kp GRAVE  &kp PG_UP      &none
+&none   &none         &none         &none         &none         &none         &trans  &none  &none              &trans                &trans                 &kp HOME   &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
