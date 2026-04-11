@@ -24,19 +24,69 @@
             key-positions = <42 28>;
         };
 
-        copy {
+        CtrlC {
             bindings = <&kp LC(C)>;
             key-positions = <41 27>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <40 26>;
         };
 
         pastevalue {
             bindings = <&kp LS(LC(V))>;
             key-positions = <16 28 42>;
+        };
+
+        pasteformula {
+            bindings = <&pasteformula>;
+            key-positions = <29 28 27>;
+        };
+
+        CtrlZ {
+            bindings = <&kp LC(Z)>;
+            key-positions = <39 25>;
+        };
+
+        CtrlX {
+            bindings = <&kp LC(X)>;
+            key-positions = <40 26>;
+        };
+
+        CtrlB {
+            bindings = <&kp LC(B)>;
+            key-positions = <29 43>;
+        };
+
+        CtrlA {
+            bindings = <&kp LC(A)>;
+            key-positions = <25 13>;
+        };
+
+        CtrlS {
+            bindings = <&kp LC(S)>;
+            key-positions = <14 26>;
+        };
+
+        CtrlF {
+            bindings = <&kp LC(F)>;
+            key-positions = <16 28>;
+        };
+
+        CtrlW {
+            bindings = <&kp LC(W)>;
+            key-positions = <2 14>;
+        };
+
+        CtrlR {
+            bindings = <&kp LC(R)>;
+            key-positions = <4 16>;
+        };
+
+        CtrlH {
+            bindings = <&kp LC(H)>;
+            key-positions = <18 32>;
+        };
+
+        CtrlY {
+            bindings = <&kp LC(Y)>;
+            key-positions = <6 18>;
         };
     };
 
@@ -61,7 +111,7 @@
         pasteformula: pasteformula {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LC(LA(V)) &kp F &kp ENTER>;
             label = "PASTEFORMULA";
         };
     };
