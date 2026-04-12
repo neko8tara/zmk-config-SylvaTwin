@@ -94,12 +94,12 @@
             key-positions = <5 17>;
         };
 
-        NextTab {
+        CtrlPagedown {
             bindings = <&kp LC(PAGE_DOWN)>;
             key-positions = <37 51>;
         };
 
-        PrevTab {
+        CtrlPageUp {
             bindings = <&kp LC(PAGE_UP)>;
             key-positions = <36 50>;
         };
@@ -112,6 +112,16 @@
         CtrlG {
             bindings = <&kp LC(G)>;
             key-positions = <29 17>;
+        };
+
+        CtrlAltPageup {
+            bindings = <&kp LC(LA(PAGE_UP))>;
+            key-positions = <34 48>;
+        };
+
+        CtrlAltPagedown {
+            bindings = <&kp LC(LA(PAGE_DOWN))>;
+            key-positions = <35 49>;
         };
     };
 
