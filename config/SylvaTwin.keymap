@@ -93,6 +93,26 @@
             bindings = <&kp LC(T)>;
             key-positions = <5 17>;
         };
+
+        NextTab {
+            bindings = <&kp LC(PAGE_DOWN)>;
+            key-positions = <37 51>;
+        };
+
+        PrevTab {
+            bindings = <&kp LC(PAGE_UP)>;
+            key-positions = <36 50>;
+        };
+
+        CtrlShiftL {
+            bindings = <&kp LS(LC(L))>;
+            key-positions = <21 35>;
+        };
+
+        CtrlG {
+            bindings = <&kp LC(G)>;
+            key-positions = <29 17>;
+        };
     };
 
     behaviors {
